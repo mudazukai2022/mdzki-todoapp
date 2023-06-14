@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+
+:root {
+  /* color */
+  /* main */
+  --main-1: #6e451d;
+  --main-2: #ad7016;
+  --main-3: #bac1ba;
+  --main-4: #e1dccd;
+
+  /* other */
+  --white: #fff;
+  --black: #000;
+  --red: rgb(164, 30, 30);
+  --green: rgb(20, 134, 20);
+  --blown: rgb(91, 65, 32);
+  --grey-0: #333538;
+  --grey-1: rgb(183, 185, 189);
+  --grey-2: rgba(183, 192, 197, 0.713);
+  
+
+  /* typography */
+  --headFont: 'Inconsolata', monospace;
+  --bodyFont: 'Roboto', sans-serif;
+  --smallText: 0.7em;
+
+  /* other */
+  --backgroundColor: var(--main-3);
+  --textColor: var(--grey);
+  --border-radius: 0.3rem;
+  --fixed-width: 700px;
+  --letter-spacing: 1px;
+  --transition: 0.3s ease-in-out all;
+  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--backgroundColor);
+   color: var(--textColor);
+   font-family: var(--bodyFont);
+   font-weight: 400;
+   line-height: 1.5;
+}
+
+/* form */
+
+form {
+   width: 100%;
+   background: var(--main-4);
+   border-radius: var(--border-radius);
+   padding: 2rem 2.5rem;
+}
+
+input, textarea {
+   width: 80%;
+   background: var(--grey-2);
+   padding: 0.4rem 0.4rem;
+   border-radius: var(--border-radius);
+   border-color: transparent;
+   border: 1px solid var(--grey-1);
+}
+
+.form-alert {
+   color: var(--red);
+   letter-spacing: var(--letter-spacing);
+   text-transform: capitalize;
+   margin-top: 1rem;
+}
+
+.list-form,
+.single-list-form {
+   width: 90vw;
+   margin: 0 auto;
+   margin-top: 6rem;
+   max-width: var(--fixed-width);
+}
+
+.list-form h4 {
+   font-size: 2rem;
+   text-align: left;
+   margin-bottom: 1rem;
+}
+
+.submit-btn {
+   width: 13%;
+   margin-left: 1rem;
+}
+
+.btn {
+   cursor: pointer;
+   appearance: none;
+   color: var(--white);
+   background: var(--main-2);
+   border: none;
+   border-radius: var(--border-radius);
+   letter-spacing: var(--letter-spacing);
+   padding: 0.2rem 0.4rem;
+   box-shadow: var(--shadow-1);
+   transition: var(--transition);
+   text-transform: capitalize;
+}
+
+.btn:hover {
+   color: var(--white);
+   background: var(--main-1);
+   box-shadow: var(--shadow-2);
+}
+
+.lists-container {
+   width: 100%;
+   width: 90vw;
+   max-width: var(--fixed-width);
+   margin: 0 auto;
+   margin-top: 1.5rem;
+}
+
+.lists {
+   display: grid;
+   gap: 1rem;
+}
+
+.single-list {
+   padding: 1rem 2.5rem;
+   background: var(--main-4);
+   border-radius: var(--border-radius);
+   box-shadow: var(--shadow-2);
+   transition: var(--transition);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.single-list h5 {
+   margin-bottom: 0;
+}
+
+.single-list span {
+   display: inline-block;
+   width: 0.5rem;
+   height: 0.5rem;
+   margin-left: 1rem;
+   margin-right: 0.8rem;
+}
+
+.single-list .fa-square-check {
+   font-size: 1rem;
+   color: var(--green);
+   visibility: hidden;
+}
+
+.list-completed h5 {
+   text-decoration: line-through;
+}
+
+.list-completed .fa-square-check {
+   visibility: visible;
+}
+
+.list-links {
+   display: flex;
+   align-items: center;
+   gap: 0 0.5rem;
+}
+
+.edit-link,
+.delete-btn {
+   background: transparent;
+   font-size: 0.9rem;
+   border: transparent;
+   cursor: pointer;
+}
+
+.edit-link {
+   color: var(--green);
+}
+
+.delete-btn {
+   color: var(--red);
+}
+
+/* リスト編集 */
+
+.single-list-form {
+   text-align: left;
+}
+
+.single-list-form h4 {
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.single-list-form p {
+   display: inline-block;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+
+.single-list-form,
+.form-control {
+   margin-bottom: 0.7rem;
+}
+.list-edit-completed {
+   width: 20px;
+}
+
+.text-success {
+   color: var(--green);
+}
+
+.back-link {
+   display: block;
+   width: 150px;
+   margin: 0 auto;
+   text-align: center;
+   text-decoration: none;
+   margin-top: 3rem;
+}
